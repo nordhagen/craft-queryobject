@@ -20,15 +20,16 @@ class QueryObjectTwigExtension extends \Twig_Extension
 
     public function queryobject($qs)
     {
-        if ($qs{0} == '?') {
-          $qs = substr($qs, 1);
-        }
-
-        $pairs = explode('&', $qs);
         $output = array();
-        while (count($pairs) > 0) {
-          $parts = explode('=', array_pop($pairs));
-          $output[$parts[0]] = $parts[1];
+        if (count($qs) > 0) {
+          if ($qs{0} == '?') {
+            $qs = substr($qs, 1);
+          }
+          $pairs = explode('&', $qs);
+          while (count($pairs) > 0) {
+            $parts = explode('=', array_pop($pairs));
+            $output[$parts[0]] = $parts[1];
+          }
         }
 
         return $output;
