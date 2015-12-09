@@ -21,7 +21,7 @@ class QueryObjectTwigExtension extends \Twig_Extension
     public function queryobject($qs)
     {
         $output = array();
-        if (count($qs) > 0) {
+        if (strlen($qs) > 0) {
           if ($qs{0} == '?') {
             $qs = substr($qs, 1);
           }
