@@ -28,7 +28,14 @@ class QueryObjectTwigExtension extends \Twig_Extension
           $pairs = explode('&', $qs);
           while (count($pairs) > 0) {
             $parts = explode('=', array_pop($pairs));
-            $output[$parts[0]] = $parts[1];
+            $name = $parts[0];
+            $value = $parts[1];
+            if($name && $value) {
+                if (strrpos($value, '+')) {
+                    $value = explode('+', $value);
+                }
+                $output[$name] = $value;
+            }
           }
         }
 

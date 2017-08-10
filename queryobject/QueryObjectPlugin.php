@@ -20,12 +20,21 @@ class QueryObjectPlugin extends BasePlugin
 
     public function getDeveloperUrl()
     {
-        return 'http://oyvindnordhagen.com';
+        return 'https://twitter.com/nordhagen';
+    }
+    public function getDocumentationUrl()
+    {
+        return 'https://github.com/nordhagen/craft-queryobject';
     }
 
     public function hasCpSection()
     {
         return false;
+    }
+
+    public function getReleaseFeedUrl()
+    {
+        return 'https://github.com/nordhagen/craft-queryobject/history.json';
     }
 
     public function addTwigExtension()

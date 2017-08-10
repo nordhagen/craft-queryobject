@@ -1,0 +1,18 @@
+[
+    {
+        "version": "1.1.0",
+        "downloadUrl": "https://github.com/nordhagen/craft-queryobject/releases/craft-queryobject-110.zip",
+        "date": "2017-08-10T10:00:00-08:00",
+        "notes": [
+            "[Added] craft-queryobject now supports array values in query string (separated by '+' character.",
+        ]
+    },
+    {
+        "version": "1.0.2",
+        "downloadUrl": "https://github.com/nordhagen/craft-queryobject/releases/craft-queryobject-102.zip",
+        "date": "2015-12-09T11:00:00-08:00",
+        "notes": [
+            "Initial release."
+        ]
+    }
+]
